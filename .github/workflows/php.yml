@@ -39,4 +39,4 @@ jobs:
           coverage: none
           tools: composer:v2
       - run: composer update --prefer-lowest --prefer-stable --prefer-dist --no-progress
-      - run: composer check
+      - run: composer test
