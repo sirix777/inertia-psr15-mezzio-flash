@@ -8,7 +8,7 @@ use Mezzio\Flash\FlashMessagesInterface;
 
 use function sprintf;
 
-final class MissingFlashRequestAttributeException extends MezzioFlashConfigurationException
+final class MissingFlashRequestAttributeException extends AbstractMezzioFlashException
 {
     public function __construct(string $requestAttribute)
     {

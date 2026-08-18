@@ -19,7 +19,6 @@ final readonly class MezzioFlashProvider implements InertiaFlashProviderInterfac
     public function __construct(private string $requestAttribute = FlashMessageMiddleware::FLASH_ATTRIBUTE) {}
 
     /**
-     * @throws Throwable
      * @throws MezzioFlashExceptionInterface
      */
     public function pull(ServerRequestInterface $request): array
@@ -34,7 +33,6 @@ final readonly class MezzioFlashProvider implements InertiaFlashProviderInterfac
     }
 
     /**
-     * @throws Throwable
      * @throws MezzioFlashExceptionInterface
      */
     public function persist(ServerRequestInterface $request, array $flash): void
@@ -55,7 +53,6 @@ final readonly class MezzioFlashProvider implements InertiaFlashProviderInterfac
     }
 
     /**
-     * @throws Throwable
      * @throws MezzioFlashExceptionInterface
      */
     public function preserve(ServerRequestInterface $request): void
