@@ -1,7 +1,6 @@
 # inertia-psr15 Mezzio flash bridge
 
-[![Latest Stable Version](https://poser.pugx.org/sirix/inertia-psr15-mezzio-flash/v)](https://packagist.org/packages/sirix/inertia-psr15-mezzio-flash)
-[![License](https://poser.pugx.org/sirix/inertia-psr15-mezzio-flash/license)](https://packagist.org/packages/sirix/inertia-psr15-mezzio-flash)
+[![Latest Stable Version](http://poser.pugx.org/sirix/inertia-psr15-mezzio-flash/v)](https://packagist.org/packages/sirix/inertia-psr15-mezzio-flash) [![Total Downloads](http://poser.pugx.org/sirix/inertia-psr15-mezzio-flash/downloads)](https://packagist.org/packages/sirix/inertia-psr15-mezzio-flash) [![Latest Unstable Version](http://poser.pugx.org/sirix/inertia-psr15-mezzio-flash/v/unstable)](https://packagist.org/packages/sirix/inertia-psr15-mezzio-flash) [![License](http://poser.pugx.org/sirix/inertia-psr15-mezzio-flash/license)](https://packagist.org/packages/sirix/inertia-psr15-mezzio-flash) [![PHP Version Require](http://poser.pugx.org/sirix/inertia-psr15-mezzio-flash/require/php)](https://packagist.org/packages/sirix/inertia-psr15-mezzio-flash)
 
 Storage-neutral Mezzio flash-message integration for [`sirix/inertia-psr15`](https://packagist.org/packages/sirix/inertia-psr15) 3.x. It adapts `Mezzio\Flash\FlashMessagesInterface` to the core public flash-provider contract. It does not install middleware, select a session backend, transform payloads, or write logs.
 
