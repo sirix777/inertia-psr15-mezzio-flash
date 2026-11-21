@@ -122,7 +122,7 @@ final class MezzioFlashProviderTest extends TestCase
             'preserve' => 'prolongFlash',
         ] as $operation => $method) {
             $failure  = new RuntimeException('sensitive-value');
-            $messages = $this->createMock(FlashMessagesInterface::class);
+            $messages = $this->createStub(FlashMessagesInterface::class);
             $messages->method($method)->willThrowException($failure);
             $request = new ServerRequest();
 
