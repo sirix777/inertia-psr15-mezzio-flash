@@ -130,7 +130,7 @@ final class ConsumerFlashLifecycleTest extends TestCase
             'X-Inertia'         => 'true',
             'X-Inertia-Version' => 'stale',
         ]))->withAttribute(FlashMessageMiddleware::FLASH_ATTRIBUTE, $messages);
-        $version = $this->createMock(InertiaVersionProviderInterface::class);
+        $version = $this->createStub(InertiaVersionProviderInterface::class);
         $version->method('currentVersion')->willReturn('current');
         $handler = $this->createMock(RequestHandlerInterface::class);
         $handler->expects(self::never())->method('handle');
@@ -143,7 +143,7 @@ final class ConsumerFlashLifecycleTest extends TestCase
     public function testExternalLocationPersistsBeforePreservingIncomingFlash(): void
     {
         $calls    = [];
-        $messages = $this->createMock(FlashMessagesInterface::class);
+        $messages = $this->createStub(FlashMessagesInterface::class);
         $messages->method('flash')->willReturnCallback(static function() use (&$calls): void { $calls[] = 'persist'; });
         $messages->method('prolongFlash')->willReturnCallback(static function() use (&$calls): void { $calls[] = 'preserve'; });
         $request = (new ServerRequest([], [], '/projects', RequestMethodInterface::METHOD_POST, 'php://memory', [
@@ -170,7 +170,7 @@ final class ConsumerFlashLifecycleTest extends TestCase
     public function testFragmentRedirectPersistsBeforePreservingIncomingFlash(): void
     {
         $calls    = [];
-        $messages = $this->createMock(FlashMessagesInterface::class);
+        $messages = $this->createStub(FlashMessagesInterface::class);
         $messages->method('flash')->willReturnCallback(static function() use (&$calls): void { $calls[] = 'persist'; });
         $messages->method('prolongFlash')->willReturnCallback(static function() use (&$calls): void { $calls[] = 'preserve'; });
         $request = (new ServerRequest([], [], '/projects', RequestMethodInterface::METHOD_POST, 'php://memory', [

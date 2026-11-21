@@ -35,7 +35,7 @@ final class MezzioFlashProviderFactoryTest extends TestCase
                 'request_attribute' => 'custom_flash',
             ],
         ]);
-        $messages = $this->createMock(FlashMessagesInterface::class);
+        $messages = $this->createStub(FlashMessagesInterface::class);
         $messages->method('getFlashes')->willReturn([
             'notice' => 'Saved',
         ]);
