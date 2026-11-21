@@ -17,9 +17,9 @@ use function preg_match;
 
 final class MezzioFlashProviderFactory
 {
-    private const CONFIG_KEY = 'inertia_psr15_mezzio_flash';
+    private const string CONFIG_KEY = 'inertia_psr15_mezzio_flash';
 
-    private const REQUEST_ATTRIBUTE_KEY = 'request_attribute';
+    private const string REQUEST_ATTRIBUTE_KEY = 'request_attribute';
 
     public function __invoke(ContainerInterface $container): MezzioFlashProvider
     {
